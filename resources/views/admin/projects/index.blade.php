@@ -22,7 +22,6 @@
                             <td>TITLE</td>
                             <td>DESCRIPTION</td>
                             <td>REPOSITORY</td>
-                            <td>IMAGE</td>
                             <td>STATUS</td>
                             <td>START</td>
                             <td>END</td>
@@ -37,7 +36,6 @@
                                 <td>{{ $project->title }}</td>
                                 <td>{{ $project->description }}</td>
                                 <td>{{ $project->repository }}</td>
-                                <td>{{ $project->image }}</td>
                                 <td>{{ $project->status }}</td>
                                 <td>{{ $project->start_date }}</td>
                                 <td>{{ $project->end_date }}</td>

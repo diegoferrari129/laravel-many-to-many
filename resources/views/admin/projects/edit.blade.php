@@ -14,7 +14,7 @@
                     @csrf
                     @method('PUT')
                     <div class="row gy-4">
-                        <div class="col-4">
+                        <div class="col-12">
                             <img src="{{ $project->image !== null ? asset('./storage/' . $project->image) : 'https://placehold.co/600x400' }}"
                                 alt="{{ $project->title }}" class="img-fluid">
                         </div>
