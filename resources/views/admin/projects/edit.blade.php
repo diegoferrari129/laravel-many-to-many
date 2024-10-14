@@ -87,6 +87,30 @@
                         </div>
 
                         <div class="col-12">
+                            <label for="" class="control-label">Project Technologies</label>
+                            <div>
+                                @foreach ($technologies as $technology)
+                                    <div>
+
+                                        @if ($errors->any())
+                                            <input type="checkbox" name="technologies[]" id=""
+                                                class="form-check-inline" value="{{ $technology->id }}"
+                                                {{ in_array($technology->id, old('technologies', [])) ? 'checked' : '' }}>
+                                        @else
+                                            <input type="checkbox" name="technologies[]" id=""
+                                                class="form-check-inline" value="{{ $technology->id }}"
+                                                {{ $project->technologies->contains($technology->id) ? 'checked' : '' }}>
+                                        @endif
+
+
+                                        <label>{{ $technology->name }}</label>
+
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+
+                        <div class="col-12">
                             <label for="" class="control-label">Description</label>
                             <textarea name="description" id="description" rows="10" cols="30"
                                 class="form-control form-control-sm @error('description')is-invalid @enderror" value="{{ old('description') }}"></textarea>
