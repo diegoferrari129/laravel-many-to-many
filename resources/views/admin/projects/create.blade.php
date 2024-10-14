@@ -87,7 +87,7 @@
                                     <div>
                                         <input type="checkbox" name="technologies[]" id=""
                                             class="form-check-inline" value="{{ $technology->id }}"
-                                            {{ is_array('technologies') && in_array($technology->id, old('technologies')) ? 'checked' : '' }}>
+                                            {{ is_array(old('technologies')) && in_array($technology->id, old('technologies')) ? 'checked' : '' }}>
                                         <label>{{ $technology->name }}</label>
                                     </div>
                                 @endforeach
