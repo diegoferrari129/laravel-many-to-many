@@ -80,6 +80,18 @@
                             </select>
                         </div>
 
+                        <div class="col-4">
+                            <label for="" class="control-label">Project Technologies</label>
+
+                            @foreach ($technologies as $technology)
+                                <input type="checkbox" name="technologies[]" id="" class="form-check-inline"
+                                    value="{{ $technology->id }}"
+                                    {{ is_array('technologies') && in_array($technology->id, old('technologies')) ? 'checked' : '' }}>
+                                <label class="form-check-label">{{ $technology->name }}</label>
+                            @endforeach
+
+                        </div>
+
                         <div class="col-12">
                             <label for="" class="control-label">Description</label>
                             <textarea name="description" id="description" rows="10" cols="30"
